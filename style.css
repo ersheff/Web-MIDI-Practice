@@ -35,7 +35,7 @@ body {
 }
 
 .animate {
-  animation: blink 0.15s;
+  animation: blink 100ms;
 }
 
 @keyframes blink {

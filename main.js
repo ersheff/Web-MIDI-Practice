@@ -33,7 +33,7 @@ document.querySelector("#audio-start")?.addEventListener("click", async () => {
     pad.addEventListener("click", (e) => {
       let rect = e.target.getBoundingClientRect(),
         vel = (rect.top-e.clientY+100)/100;
-      sampler.triggerAttackRelease(pitch, 1, Tone.now(), vel);
+      sampler.triggerAttackRelease(pitch, 1, Tone.immediate(), vel);
       setTimeout(() => { pad.classList.toggle("animate"); }, 150);
       pad.classList.toggle("animate");
     })
@@ -62,8 +62,8 @@ document.querySelector("#audio-start")?.addEventListener("click", async () => {
       pitch = midiConvert(message.data[1]),
       vel = message.data[2]/127;
     if (type === 144 && vel > 0 && (pitch in midiPads)) {
-      sampler.triggerAttackRelease(pitch, 1, Tone.now(), vel);
-      setTimeout(() => { midiPads[pitch].classList.toggle("animate"); }, 150);
+      sampler.triggerAttackRelease(pitch, 1, Tone.immediate(), vel);
+      setTimeout(() => { midiPads[pitch].classList.toggle("animate"); }, 100);
       midiPads[pitch].classList.toggle("animate");
     }
   }
