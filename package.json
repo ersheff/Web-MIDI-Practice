@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ersheff/Web-MIDI-Practice#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "tone": "^14.7.77"
   }
 }
