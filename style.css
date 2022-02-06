@@ -1,0 +1,44 @@
+:root {
+  --dk-blue: rgb(52, 52, 207);
+  --lt-blue: rgb(203, 242, 255);
+}
+
+body {
+  padding: 1ch;
+  color: var(--dk-blue);
+}
+
+.spacer {
+  height: .2rem;
+  width: 500px;
+  background: var(--lt-blue);
+}
+
+.start-container {
+  display: flex;
+  gap: 1ch;
+}
+
+.button-container {
+  display: flex;
+}
+
+.midi-key {
+  height: 100px;
+  width: 100px;
+  background: white;
+}
+
+.pad:hover {
+  cursor: pointer;
+  background: var(--lt-blue);
+}
+
+.animate {
+  animation: blink 0.15s;
+}
+
+@keyframes blink {
+  0% { background: yellow; font-size: 1.4rem;}
+  100% { background: white; font-size: 1rem;}
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://unpkg.com/tone"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Quick Web MIDI demo</h1>
+
+  <div class="spacer"></div>
+
+  <br>
+
+  <p>1. Click button to start audio:</p>
+  <div class="start-container">
+    <button id="audio-start">Start Audio</button>
+    <div id="status">Audio is not ready...</div>
+  </div>
+
+  <br>
+  <br>
+
+  <p>2. Audition samples with these buttons (vertical position changes amplitude):</p>
+  <div class="button-container">
+    <button class="midi-key" id="kick" value="C4">Kick</button>
+    <button class="midi-key" id="snare" value="D4">Snare</button>
+    <button class="midi-key" id="hat" value="E4">Hat</button>
+    <button class="midi-key" id="shaker" value="F4">Shaker</button>
+  </div>
+
+  <br>
+  <br>
+
+  <p>3. Test with MIDI controller:</p>
+  <ul>
+    <li>Kick = C4 (middle C)</li>
+    <li>Snare = D4</li>
+    <li>Hat = E4</li>
+    <li>Shaker = F4</li>
+  </ul>
+
+  <script src="main.js"></script>
+</body>
+</html>
